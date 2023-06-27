@@ -5,8 +5,8 @@ const pool = new Pool({
   host: "localhost",
   port: 5432,
   database: "restaurantdb",
-  user: "alehs",
-  password: "",
+  user: "postgres",
+  password: "Alejandroh01",
 });
 
 router.get("/", async (req, res) => {
@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
   try {
     const { name, phone, email } = req.body;
     const { rows } = await pool.query(
-      "INSERT INTO customer (name, phone, email) VALUES ($1, $2, $3') RETURNING *",
+      "INSERT INTO customer (name, phone, email) VALUES ($1, $2, $3) RETURNING *",
       [name, phone, email]
     );
     console.log(rows);
@@ -28,4 +28,5 @@ router.post("/", async (req, res) => {
     console.log(error);
   }
 });
+
 module.exports = router;

@@ -5,8 +5,8 @@ const pool = new Pool({
   host: "localhost",
   port: 5432,
   database: "restaurantdb",
-  user: "alehs",
-  password: "",
+  user: "postgres",
+  password: "Alejandroh01",
 });
 
 router.get("/", async (req, res) => {
