@@ -46,7 +46,7 @@ npm -v
 ## Installing PostgreSQL
 1. Download and install PostgreSQL from the [official website](https://www.postgresql.org/download/).
 2. Set up a new user and database during installation or through the PostgreSQL CLI:
-   - Create a user:  
+   - Create a user and password (make sure to replace your password on the code when connecting to datatabase):  
      ```sql
      CREATE USER postgres WITH PASSWORD 'your_password';
      ```
@@ -64,8 +64,8 @@ npm -v
 - Clone the repository:
 
 ```bash
-git clone https://github.com/AleHS01/tpp-assigment-10.git
-cd tpp-assigment-10.git
+git clone https://github.com/AleHS01/restaurant-server-ttp-10.git
+cd restaurant-server-ttp-10
 ```
 - Install dependecies:
 ```bash
